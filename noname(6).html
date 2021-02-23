@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html Lang="en">
+<head>
+<link rel="stylesheet" href="na.css"> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equive="X-UA-Compatible" content="ie=edge">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+
+<body>
+<nav class="nav-active">
+<div class="logo"
+<h2>Smile Please</h2>
+
+
+</div>
+<ul class="nav-links">
+
+<center> 
+     <img src="file:///storage/emulated/0/Download/please.jpg" class="k"> 
+    </center> 
+    <li><a href="#home"><i class="fas fa-home"></i><span class="hp">Home</span></a></li> 
+    <li><a href="#services"><i class="fas fa-concierge-bell"></i><span class="hp">Services</span></a></li> 
+    <li><a href="#contact"><i class="fas fa-address-book"></i><span class="hp">Contact</span></a></li> 
+    <li><a href="#about"><i class="fas fa-info-circle"></i><span class="hp">About</span></a></li>
+</ul>
+<div class="burger" class="toggle">
+<div class="line-1"></div>
+<div class="line-2"></div>
+<div class="line-3"></div>
+</div>
+</nav>
+<section id="home">
+<h1><i class="fas fa-home"></i><span class="ho"><u><span class="hom">  HOME</span></u></span></h1>
+<Center><h1 class="h"><span class="w">WELCOME</span><span class="t"> TO</span><span class="o"> OUR</span><span class="on"> ONLINE</span><span class="s"> SHOP!!!</h1></center><br>
+<h3><p>It will be a great pleasure if you deal with us.For any help please contact us and "KEEP SMILING".</p></h3>
+</section>
+<br>
+<section id="services">
+<h1><i class="fas fa-concierge-bell"></i><span class="ho"><u><span class="hom">  SERVICES</span></u></span></h1>
+<h3><p>We supply different types of products maintaining the highest quality.</p></h3>
+
+</section>
+<br>
+<section id="contact">
+<h1><i class="fas fa-address-book"></i><span class="ho"><u><span class="hom">  CONTACT</span></u></span></h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<section class="em">
+<div class="container">
+<form action="https://formspree.io/f/mwkwnjbg" method="POST" id="my-form">
+
+<div class="form-group">
+<label for="firstname"> YOUR NAME</label>
+<input type="text" id="firstname" name="firstname">
+</div>
+
+<div class="form-group">
+<label for="email"> YOUR EMAIL</label>
+<input type="email" id="email" name="email">
+</div>
+
+<div class="form-group">
+<label for="product id"> PRODUCT ID</label>
+<input type="text" id="product id" name="product id">
+</div>
+
+<div class="form-group">
+<label for="address"> YOUR ADDRESS</label>
+<input type="text" id="address" name="address">
+</div>
+
+<div class="form-group">
+<label for="message"> MESSAGE(OPTIONAL)</label>
+<textarea  id="message" name="message" cols="30" rows="10"></textarea>
+</div>
+
+<button type="submit">SUBMIT</button>
+</form>
+</div>
+<div id="status"></div>
+
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<h1><span class="th">THANKS</span><span class="f"> FOR</span><span class="c"> COMING</span><br>
+<span class="st">STAY</span><span class="sa"> SAFE</span>
+</h1>
+</center>
+<script>
+const navSlide = () => {
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links li');
+
+burger.addEventListener('click', () => {
+nav.classList.toggle('nav-active');
+navLinks.forEach((link, index) => {
+if (link.style.animation) {
+link.style.animation = '';
+}
+else {
+link.style.animation = 'navLinkFade 0.6s ease forwards ${index / 7 + 0.3}s';}
+
+});
+burger.classList.toggle('toggle');
+});
+}
+navSlide();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+    
+    var form = document.getElementById("my-form");
+    
+    var status = document.getElementById("status");
+
+    // Success and Error functions for after the form is submitted
+    
+    function success() {
+      form.reset();
+      status.classList.add('success');
+      status.innerHTML = "Thanks!";
+    }
+
+    function error() {
+status.classList.add('error');
+      status.innerHTML = "Oops! There was a problem.";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+  
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+
+</script>
+
+</body>
+</html>

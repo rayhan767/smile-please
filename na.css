@@ -1,0 +1,328 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: 'Montserrat';
+
+}
+body{
+background-color: #666161;
+}
+u{
+background-color: black;
+color: black;
+background-size: 7px;
+}
+.hom{
+color: white;
+
+}
+<!-----#home h1 i{
+color: black;
+background-color: #8f354e;
+}-->
+.h{
+justify-content: center;
+}
+.w{
+color: yellow;
+}
+.t{
+color: red;
+}
+.o{
+color: steelblue;
+}
+.on{
+color: white;
+}
+.s{
+color: orange;
+}
+.th{
+color: steelblue;
+}
+.f{
+color: orange;
+}
+.c{
+color: yellow;
+}
+.st{
+color: white;
+}
+.sa{
+color: white;
+}
+.ho{
+color: white;
+}
+
+nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+min-height: 8vh;
+background-color: #5D4954;
+
+}
+
+
+.logo{
+color: white;
+text-transform: uppercase;
+letter-spacing: 5px;
+font-size: 40px;
+font-family: "Poppins, sans-serif";
+}
+
+
+.nav-links{
+background-color: #5D4954;
+display: flex;
+font-family: "Poppins, sans-serif";
+justify-content: space-around;
+width: 55%;
+align-items: center;
+}
+
+.nav-links li{
+list-style: none;
+
+}
+
+.nav-links li a{
+
+
+flex-direction: column;
+text-decoration: none;
+letter-spacing: none;
+font-weight: bold;
+ font-size: 30px;
+ color: steelblue;
+ 
+ padding: 7px 13px;
+ border-radius: 3px;
+ text-transform: uppercase;
+}
+
+
+.burger{
+display: none;
+cursor: pointer;
+}
+.burger div{
+width: 25px;
+height: 3px;
+background-color: rgb(226, 226, 226);
+margin: 5px;
+}
+@media screen and (max-width:1100px){
+.hom{
+color: white;
+background-color: black;
+}
+
+.k{
+ width: 60px;
+ height: 60px;
+ border-radius: 60px;
+ margin-bottom: 2px;
+padding-top: 2px;
+}
+.hp{
+justify-content: center;
+}
+.nav-active{
+
+height: 65px;
+}
+
+.nav-links li a{
+font-size: 17px;
+justify-content: center;
+margin-top: 4px;
+}
+
+nav-links{
+background-color: #5d4954;
+height: 10px;
+
+}
+.nav-links li {
+height: 50px;
+position: center;
+
+}
+}
+
+@media screen and (max-width:786px){
+body{
+overflow-x: hidden;
+}
+.k{
+ width: 100px;
+ height: 100px;
+ border-radius: 100px;
+ margin-bottom: 10px;
+}
+.nav-active{
+height: 80px;
+}
+.nav-links {
+border: 2px dotted black;
+position: absolute;
+right: 0px;
+height: 100vh;
+top: 0vh;
+background-color: #666161;
+display: flex;
+flex-direction: column;
+
+width: 50%;
+transform: translateX(100%);
+transition: transform 0.5s ease-in;
+}
+.hp{
+border: 2px dotted #b1b4fa;
+background-color: black;
+font-size: 20px;
+}
+.nav-links li a i{
+
+color: black;
+font-size: 20px;
+padding-right: 10px;
+align-items: center;
+
+}
+.nav-links li{
+opacity: 1;
+}
+
+.burger{
+display: block;
+} 
+
+}
+.nav-active{
+color: #666161;
+transform: translateX(0%);
+}
+@keyframes navLInkFade{
+from{
+opacity: 0;
+transform: translateX(50px);
+}
+to{
+
+opacity: 1;
+transform: translateX(0px);
+}
+}
+.toggle .line-1{
+transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line-2{
+opacity: 0;
+}
+.toggle .line-3{
+transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+h1{
+padding-top: 20px;
+}
+p{
+color: #b1b4fa;
+
+}
+
+.em{
+height: 100vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.container{
+width: 90%;
+max-width: 500px;
+margin: 0 auto;
+padding: 20px;
+box-shadow: 0px 0px 20px #00000010;
+background-color: #b1b4fa;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+.form-group{
+width: 100%;
+margin-top: 20px;
+font-size: 20px;
+}
+
+.form-group input,
+.form-group textarea{
+width: 100%;
+padding: 5px;
+font-size: 18px;
+border: 1px solid rgba(128, 128, 128, 0.199);
+margin-top: 5px;
+}
+textarea{
+resize: vertical;
+}
+button[type="submit"]{
+width: 100%;
+border: none;
+outline: none;
+padding: 20px;
+font-size: 24px;
+border-radius: 8px;
+font-family: 'Montserrat';
+color: rgb(27, 166, 247);
+text-align: center;
+cursor: pointer;
+margin-top: 10px;
+transition: .3s ease background-color;
+}
+
+button[type="submit"]:hover{
+background-color: rgb(214, 226, 236);
+}
+
+#status{
+width: 90%;
+max-width: 500px;
+text-align: center;
+padding: 10px;
+margin: 0 auto;
+border-radius: 8px;
+}
+
+#status.success{
+background-color: rgb(211, 250, 153);
+animation: status 4s ease forwards;
+}
+#status.error{
+background-color: rgb(250, 129, 92);
+color: white;
+animation: status 4s ease forwards;
+}
+@keyframes status{
+0%{
+opacity: 1;
+pointer-events: all;
+}
+90%{
+opacity: 1;
+pointer-events: all;
+}
+100%{
+opacity: 0;
+pointer-events: none;
+}
+}
